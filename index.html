@@ -229,6 +229,28 @@ section{padding-block:46px;border-top:2px dashed var(--border);}
 .about-section p{max-width:62ch;color:var(--ink-soft);font-size:16px;}
 .about-section .lede{color:var(--ink);font-size:19px;font-family:'Fraunces',serif;font-weight:700;max-width:36ch;margin-bottom:14px;}
 
+/* ---------- reviews ---------- */
+.review-section .intro{max-width:58ch;color:var(--ink-soft);font-size:18px;margin:0 0 22px;}
+.review-steps{list-style:none;margin:0 0 30px;padding:0;display:flex;flex-wrap:wrap;gap:14px;counter-reset:step;}
+.review-steps li{
+  flex:1 1 210px;counter-increment:step;display:flex;gap:12px;align-items:flex-start;
+  background:var(--paper-raised);border:2px solid var(--border);border-radius:14px;padding:14px 16px;
+  font-size:18px;font-weight:600;line-height:1.35;
+}
+.review-steps li::before{
+  content:counter(step);flex-shrink:0;width:32px;height:32px;border-radius:50%;background:var(--wine);color:#FFF9F1;
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;
+}
+.review-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;}
+.review-card{
+  display:flex;flex-direction:column;justify-content:space-between;gap:14px;
+  background:var(--paper-raised);border:2px solid var(--ink);border-radius:14px;padding:18px;
+  box-shadow:0 4px 0 var(--shadow);
+}
+.review-card .rtitle{font-family:'Fraunces',serif;font-weight:700;font-size:20px;line-height:1.2;}
+.review-card .btn-buy{justify-content:center;font-size:16px;padding:13px 18px;}
+.review-note{margin:22px 0 0;color:var(--ink-soft);font-size:16px;max-width:62ch;}
+
 footer{padding-block:32px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
   font-size:13px;color:var(--ink-faint);border-top:2px dashed var(--border);}
 footer .foot-brand{display:flex;align-items:center;gap:10px;}
@@ -253,6 +275,7 @@ footer .seal{width:28px;height:28px;font-size:13px;}
   <nav class="site">
     <a href="#play">Play</a>
     <a href="#books">Books</a>
+    <a href="#review">Reviews</a>
     <a href="#about">About</a>
   </nav>
 </header>
@@ -263,7 +286,7 @@ footer .seal{width:28px;height:28px;font-size:13px;}
   <svg class="leaf l2" width="26" height="40" viewBox="0 0 40 60" aria-hidden="true"><path d="M20 2 C34 14 34 46 20 58 C6 46 6 14 20 2 Z" fill="currentColor"/><path d="M20 8 L20 52" stroke="var(--paper)" stroke-width="2" opacity="0.55"/></svg>
   <div class="hero-eyebrow">A new find-the-words puzzle, every day</div>
   <h1>Find the words. <span class="hl">Feel the win.</span></h1>
-  <p class="lede">Letterline Books makes big, bright, large-print word search puzzles for grown-ups. While the first volumes are being finished, play a free themed puzzle here — a new one every day.</p>
+  <p class="lede">Letterline Books makes big, bright, large-print word search puzzles for grown-ups. Find our books on Amazon, and play a free themed puzzle here — a new one every day.</p>
   <div class="hero-ctas">
     <a href="#play" class="btn btn-primary">Play today's puzzle</a>
     <a href="#books" class="btn btn-outline">See the books</a>
@@ -312,7 +335,7 @@ footer .seal{width:28px;height:28px;font-size:13px;}
       <div class="book-info">
         <span class="label">Available now</span>
         <p><strong>October Word Search</strong> — 50 large-print seasonal &amp; Halloween puzzles. Big letters, 20–21 words per puzzle, answer keys included.</p>
-        <a class="btn-buy" href="https://www.amazon.com/October-Word-Search-Large-Print-Letterline/dp/0998921467/ref=sr_1_3?crid=139MWS583CLJ5&dib=eyJ2IjoiMSJ9.J57QWlc-NHoQFWybUbonh19LNWGWS17EnR9-2Ob8ouVtkj5N6LLTaJGXiqpEALhgcskJzUsFF7-aqQBfbqWZrpNYe5kxg5cEXzdKFDLFsTNsn7mPbOUTRZmQquY64m5Kut9eBiG4_qs9PPLTRBW-YUqsIcmVSNVjEhVvd64MA5lXrzYk3jWEdvd5fUr1Oxdjk3sm6_3p8MFF1FKOpKHylace6UKg_PFnREEZioaJyzo.AUM3-e99yBkBFpAgTvLALwAysY5mVVTXsgmEeyrGQc8&dib_tag=se&keywords=letterline+books&qid=1791398972&sprefix=letter+line+bo%2Caps%2C306&sr=8-3" target="_blank" rel="noopener">Buy on Amazon</a>
+        <a class="btn-buy" href="https://www.amazon.com/dp/0998921467" target="_blank" rel="noopener">Buy on Amazon</a>
       </div>
     </div>
     <div class="book-card">
@@ -320,7 +343,7 @@ footer .seal{width:28px;height:28px;font-size:13px;}
       <div class="book-info">
         <span class="label">Available now</span>
         <p><strong>November Word Search</strong> — 70 large-print fall &amp; Thanksgiving puzzles. Big letters, 21 words per puzzle, answer keys included.</p>
-        <a class="btn-buy" href="https://www.amazon.com/November-Word-Search-Thanksgiving-Letterline/dp/0998921440/?_encoding=UTF8&pd_rd_w=65DQJ&content-id=amzn1.sym.ac827e48-2948-4721-83ef-3e7648ac35cb&pf_rd_p=ac827e48-2948-4721-83ef-3e7648ac35cb&pf_rd_r=137-2784181-6373416&pd_rd_wg=JGiJ0&pd_rd_r=e1ef276e-5de9-4881-acb2-02520131d05a" target="_blank" rel="noopener">Buy on Amazon</a>
+        <a class="btn-buy" href="https://www.amazon.com/dp/0998921440" target="_blank" rel="noopener">Buy on Amazon</a>
       </div>
     </div>
     <div class="book-card">
@@ -328,7 +351,7 @@ footer .seal{width:28px;height:28px;font-size:13px;}
       <div class="book-info">
         <span class="label">Available now</span>
         <p><strong>December Word Search</strong> — 70 large-print winter &amp; holiday puzzles. Big letters, 21 words per puzzle, answer keys included.</p>
-        <a class="btn-buy" href="https://www.amazon.com/December-Word-Search-Letterline-Seasonal/dp/0998921459/?_encoding=UTF8&pd_rd_w=a2Sqv&content-id=amzn1.sym.ac827e48-2948-4721-83ef-3e7648ac35cb&pf_rd_p=ac827e48-2948-4721-83ef-3e7648ac35cb&pf_rd_r=137-2784181-6373416&pd_rd_wg=Dk4bE&pd_rd_r=4f88c560-3161-4d41-b744-0081c4a44e41" target="_blank" rel="noopener">Buy on Amazon</a>
+        <a class="btn-buy" href="https://www.amazon.com/dp/0998921459" target="_blank" rel="noopener">Buy on Amazon</a>
       </div>
     </div>
     <div class="book-card">
@@ -336,7 +359,31 @@ footer .seal{width:28px;height:28px;font-size:13px;}
       <div class="book-info">
         <span class="label">Available now</span>
         <p><strong>Hanukkah Word Search</strong> — 70 large-print Hanukkah &amp; winter puzzles. Big letters, 21 words per puzzle, answer keys included.</p>
-        <a class="btn-buy" href="https://www.amazon.com/Hanukkah-Word-Search-Subtitle70-Letterline/dp/B0HM4Z5N7X/?_encoding=UTF8&pd_rd_w=NZK6V&content-id=amzn1.sym.ac827e48-2948-4721-83ef-3e7648ac35cb&pf_rd_p=ac827e48-2948-4721-83ef-3e7648ac35cb&pf_rd_r=137-2784181-6373416&pd_rd_wg=XXDEZ&pd_rd_r=567af763-032c-47c9-9b13-2d28aeac3b6a" target="_blank" rel="noopener">Buy on Amazon</a>
+        <a class="btn-buy" href="https://www.amazon.com/dp/B0HM4Z5N7X" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+    </div>
+    <div class="book-card">
+      <div class="book-cover-image"><img src="https://m.media-amazon.com/images/I/61m521rVS+L._SL1293_.jpg" alt="January Word Search cover" loading="lazy"></div>
+      <div class="book-info">
+        <span class="label">Available now</span>
+        <p><strong>January Word Search</strong> — 70 large-print winter &amp; New Year puzzles. Big letters, 21 words per puzzle, answer keys included.</p>
+        <a class="btn-buy" href="https://www.amazon.com/dp/B0HN35K388" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+    </div>
+    <div class="book-card">
+      <div class="book-cover-image"><img src="https://m.media-amazon.com/images/I/61Sh6vvJK0L._SL1293_.jpg" alt="Manifest Wealth Word Search cover" loading="lazy"></div>
+      <div class="book-info">
+        <span class="label">Available now</span>
+        <p><strong>Manifest Wealth Word Search</strong> — 70 large-print abundance &amp; affirmation puzzles. Big letters, 21 words per puzzle, answer keys included.</p>
+        <a class="btn-buy" href="https://www.amazon.com/dp/B0HN67KJJL" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+    </div>
+    <div class="book-card">
+      <div class="book-cover-image"><img src="https://m.media-amazon.com/images/I/71UpTl+pWcL._SL1293_.jpg" alt="In the Warming Oven cover" loading="lazy"></div>
+      <div class="book-info">
+        <span class="label">Available now</span>
+        <p><strong>In the Warming Oven</strong> — A cozy fall baking coloring book. 50 detailed kitchen and bakery scenes, one per page, printed single-sided.</p>
+        <a class="btn-buy" href="https://www.amazon.com/dp/B0HNTVXVPF" target="_blank" rel="noopener">Buy on Amazon</a>
       </div>
     </div>
     <div class="book-card">
@@ -355,6 +402,51 @@ footer .seal{width:28px;height:28px;font-size:13px;}
   <p class="series-teaser"><strong>Also coming:</strong> a calmer <em>Mindfulness Word Search</em> series — gentle themes for slow, unhurried solving. Details soon.</p>
 </section>
 
+<section id="review" class="review-section">
+  <div class="section-head">
+    <h2>Loved a Letterline book? Leave a review.</h2>
+    <span class="section-tag">About a minute</span>
+  </div>
+  <p class="intro">Honest reviews help other puzzle lovers find our books, and help a small publisher keep making them. Thank you for taking a moment!</p>
+  <ol class="review-steps">
+    <li><span>Find your book below and click <strong>Write a review</strong>.</span></li>
+    <li><span>Sign in to Amazon.</span></li>
+    <li><span>Pick your stars and write a line or two.</span></li>
+    <li><span>Got a free copy? Add: &ldquo;I received a free copy.&rdquo;</span></li>
+  </ol>
+  <div class="review-grid">
+    <div class="review-card">
+      <span class="rtitle">October Word Search</span>
+      <a class="btn-buy" href="https://www.amazon.com/review/create-review?asin=0998921467" target="_blank" rel="noopener">Write a review</a>
+    </div>
+    <div class="review-card">
+      <span class="rtitle">November Word Search</span>
+      <a class="btn-buy" href="https://www.amazon.com/review/create-review?asin=0998921440" target="_blank" rel="noopener">Write a review</a>
+    </div>
+    <div class="review-card">
+      <span class="rtitle">December Word Search</span>
+      <a class="btn-buy" href="https://www.amazon.com/review/create-review?asin=0998921459" target="_blank" rel="noopener">Write a review</a>
+    </div>
+    <div class="review-card">
+      <span class="rtitle">Hanukkah Word Search</span>
+      <a class="btn-buy" href="https://www.amazon.com/review/create-review?asin=B0HM4Z5N7X" target="_blank" rel="noopener">Write a review</a>
+    </div>
+    <div class="review-card">
+      <span class="rtitle">January Word Search</span>
+      <a class="btn-buy" href="https://www.amazon.com/review/create-review?asin=B0HN35K388" target="_blank" rel="noopener">Write a review</a>
+    </div>
+    <div class="review-card">
+      <span class="rtitle">Manifest Wealth Word Search</span>
+      <a class="btn-buy" href="https://www.amazon.com/review/create-review?asin=B0HN67KJJL" target="_blank" rel="noopener">Write a review</a>
+    </div>
+    <div class="review-card">
+      <span class="rtitle">In the Warming Oven</span>
+      <a class="btn-buy" href="https://www.amazon.com/review/create-review?asin=B0HNTVXVPF" target="_blank" rel="noopener">Write a review</a>
+    </div>
+  </div>
+  <p class="review-note">Reviews are always optional, and we welcome your honest opinion, whatever it is.</p>
+</section>
+
 <section id="about" class="about-section">
   <div class="section-head"><h2>Why Letterline</h2></div>
   <p class="lede">Puzzles built to be enjoyed, not squinted at.</p>
@@ -363,7 +455,7 @@ footer .seal{width:28px;height:28px;font-size:13px;}
 
 <footer>
   <div class="foot-brand"><div class="seal">L</div><span>© <span id="year"></span> Letterline Books</span></div>
-  <span>A new word search daily</span>
+  <span><a href="#review">Leave a review</a> · A new word search daily</span>
 </footer>
 </div>
 
