@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Letterline Books - free daily word search puzzle and a growing series of large-print word search books.">
 <title>Letterline Books</title>
+<link rel="icon" type="image/png" href="/logo.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;0,900;1,500;1,600;1,700&family=DM+Sans:wght@400;500;600;700;800&display=swap">
 <style>
 :root{color-scheme:light;}
@@ -255,6 +256,9 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;align-
   font-size:13px;color:var(--ink-faint);border-top:2px dashed var(--border);}
 footer .foot-brand{display:flex;align-items:center;gap:10px;}
 footer .seal{width:28px;height:28px;font-size:13px;}
+.logo{width:96px;height:96px;display:block;}
+.logo-sm{width:40px;height:40px;display:block;}
+@media (max-width:640px){.logo{width:80px;height:80px;}}
 
 @media (max-width:640px){
   nav.site{display:none;}
@@ -265,13 +269,7 @@ footer .seal{width:28px;height:28px;font-size:13px;}
 <body>
 <div class="wrap">
 <header class="site">
-  <div class="wordmark">
-    <div class="seal">L</div>
-    <div class="wordmark-text">
-      <span class="mark">Letterline Books</span>
-      <span class="sub">Word Search</span>
-    </div>
-  </div>
+  <a class="wordmark" href="/" aria-label="Letterline Books home"><img class="logo" src="/logo.png" alt="Letterline Books" width="96" height="96"></a>
   <nav class="site">
     <a href="#play">Play</a>
     <a href="#books">Books</a>
@@ -454,7 +452,7 @@ footer .seal{width:28px;height:28px;font-size:13px;}
 </section>
 
 <footer>
-  <div class="foot-brand"><div class="seal">L</div><span>© <span id="year"></span> Letterline Books</span></div>
+  <div class="foot-brand"><img class="logo-sm" src="/logo.png" alt="" width="40" height="40"><span>© <span id="year"></span> Letterline Books</span></div>
   <span><a href="#review">Leave a review</a> · A new word search daily</span>
 </footer>
 </div>
