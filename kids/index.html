@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Letterline Kids: The Gingerbread Man's Christmas Run picture book and activity book for children.">
+<title>Letterline Kids · Letterline Books</title>
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;0,900;1,500;1,600;1,700&family=DM+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+:root{color-scheme:light;}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-padding-top:0;}
+body{margin:0;padding:0;}
+img{max-width:100%;}
+[hidden]:not([hidden=until-found]){display:none !important;}
+</style>
+<style>
+:root{
+  --paper:#FBF2E2;
+  --paper-raised:#FFFDF8;
+  --paper-dim:#F5E4CE;
+  --ink:#3A1E3D;
+  --ink-soft:#7E6877;
+  --ink-faint:#AE9DA0;
+  --border:#E1D3C6;
+  --shadow:rgba(58,30,61,0.16);
+  --ink-on-accent:#3A1E3D;
+  --wine:#822645;
+  --wine-deep:#621831;
+  --salmon:#F3C1A1;
+  --sage:#C8CDB0;
+  --golden:#F9DDA9;
+  --rose:#E1AFA3;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#20121F;
+    --paper-raised:#2C1930;
+    --paper-dim:#38213D;
+    --ink:#FBF2E2;
+    --ink-soft:#CBBDB9;
+    --ink-faint:#9A8890;
+    --border:#4A3348;
+    --shadow:rgba(0,0,0,0.5);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#20121F;
+  --paper-raised:#2C1930;
+  --paper-dim:#38213D;
+  --ink:#FBF2E2;
+  --ink-soft:#CBBDB9;
+  --ink-faint:#9A8890;
+  --border:#4A3348;
+  --shadow:rgba(0,0,0,0.5);
+}
+
+*{box-sizing:border-box;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'DM Sans', system-ui, sans-serif;
+  padding-inline:20px;
+  line-height:1.55;
+}
+h1,h2,h3{
+  font-family:'Fraunces', Georgia, serif;
+  font-weight:700;
+  text-wrap:balance;
+  margin:0;
+}
+a{color:var(--wine);}
+button{font-family:inherit;}
+em{font-style:italic;color:var(--wine);}
+.wrap{max-width:1040px;margin-inline:auto;}
+
+/* ---------- header ---------- */
+header.site{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding-block:22px;flex-wrap:wrap;
+}
+.wordmark{display:flex;align-items:center;gap:12px;}
+.seal{
+  width:42px;height:42px;border-radius:50%;border:2px solid var(--ink);background:var(--paper-raised);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  font-family:'Fraunces',serif;font-weight:700;font-size:19px;color:var(--ink);
+}
+.wordmark-text{display:flex;flex-direction:column;line-height:1.15;}
+.wordmark .mark{font-family:'Fraunces',serif;font-weight:700;font-size:20px;color:var(--ink);}
+.wordmark .sub{
+  font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.14em;font-weight:700;
+  text-transform:uppercase;color:var(--wine);
+}
+nav.site{display:flex;gap:22px;font-size:14px;}
+nav.site a{color:var(--ink-soft);text-decoration:none;font-weight:700;}
+nav.site a:hover{color:var(--wine);}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding-block:52px 40px;display:flex;flex-direction:column;gap:20px;overflow:hidden;}
+.confetti{position:absolute;inset:0;pointer-events:none;z-index:0;}
+.confetti span{position:absolute;border-radius:50%;opacity:0.5;}
+.leaf{position:absolute;opacity:0.55;pointer-events:none;z-index:0;}
+.leaf.l1{top:6px;left:-4px;color:var(--wine);transform:rotate(-18deg);}
+.leaf.l2{top:2px;right:2%;color:var(--sage);transform:rotate(24deg);}
+.hero-eyebrow{
+  font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;
+  color:var(--wine);position:relative;z-index:1;
+}
+.hero h1{font-size:clamp(36px,6vw,60px);line-height:1.04;max-width:15ch;position:relative;z-index:1;font-weight:900;}
+.hero h1 .hl{font-style:italic;font-weight:600;color:var(--wine);}
+.hero p.lede{max-width:54ch;color:var(--ink-soft);font-size:17px;position:relative;z-index:1;}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;position:relative;z-index:1;padding-top:4px;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:100px;
+  font-size:15px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;
+  transition:transform .12s ease, background .15s ease;font-family:'DM Sans',sans-serif;
+}
+.btn:active{transform:translateY(1px) scale(.98);}
+.btn-primary{background:var(--wine);color:#FFF9F1;}
+.btn-primary:hover{background:var(--wine-deep);}
+.btn-outline{background:transparent;border-color:var(--ink);color:var(--ink);}
+.btn-outline:hover{background:var(--paper-dim);}
+.btn:focus-visible, .wcell:focus-visible, a:focus-visible, button:focus-visible{outline:3px solid var(--wine);outline-offset:2px;}
+
+/* ---------- section shell ---------- */
+section{padding-block:46px;border-top:2px dashed var(--border);}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px;}
+.section-head h2{font-size:clamp(24px,3vw,32px);font-weight:700;}
+.section-tag{font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;color:var(--ink-faint);}
+
+/* ---------- puzzle toolbar ---------- */
+.puzzle-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:18px;}
+.pill{
+  font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.04em;font-weight:700;
+  border:2px solid var(--ink);border-radius:100px;padding:5px 13px;color:var(--ink);background:var(--paper-raised);
+}
+.pill.theme{background:var(--golden);border-color:var(--ink);color:var(--ink-on-accent);}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;}
+.tbtn{
+  font-size:13px;font-weight:700;padding:10px 16px;border-radius:100px;font-family:'DM Sans',sans-serif;
+  border:2px solid var(--ink);background:var(--paper-raised);color:var(--ink);cursor:pointer;
+}
+.tbtn:hover{background:var(--paper-dim);}
+
+/* ---------- puzzle layout ---------- */
+.puzzle-layout{display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap;}
+.grid-wrap{flex:0 1 460px;max-width:100%;}
+#grid{
+  display:grid;gap:1px;background:var(--border);border:3px solid var(--ink);border-radius:14px;
+  width:100%;aspect-ratio:1/1;overflow:hidden;user-select:none;touch-action:none;
+}
+.wcell{
+  position:relative;background:var(--paper-raised);display:flex;align-items:center;justify-content:center;
+  font-family:'DM Sans',sans-serif;font-weight:800;font-size:clamp(11px,2.6vw,16px);color:var(--ink);
+  cursor:pointer;
+}
+.wcell.sel{background:var(--golden);color:var(--ink-on-accent);}
+.wcell.found-0{background:var(--salmon);color:var(--ink-on-accent);}
+.wcell.found-1{background:var(--sage);color:var(--ink-on-accent);}
+.wcell.found-2{background:var(--golden);color:var(--ink-on-accent);}
+.wcell.found-3{background:var(--rose);color:var(--ink-on-accent);}
+
+.words-wrap{flex:1 1 240px;min-width:220px;}
+.words-wrap h3{
+  font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;
+  color:var(--ink-faint);margin-bottom:12px;
+}
+.word-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;}
+.word-list li{
+  font-size:15px;font-weight:700;padding:8px 12px;border-radius:10px;border:2px solid var(--border);
+  display:flex;align-items:center;gap:10px;color:var(--ink);
+}
+.word-list li .dot{width:12px;height:12px;border-radius:50%;background:var(--ink-faint);flex-shrink:0;border:1.5px solid var(--ink);}
+.word-list li.found{color:var(--ink-faint);text-decoration:line-through;border-color:transparent;}
+.word-list li.found.f-0 .dot{background:var(--salmon);}
+.word-list li.found.f-1 .dot{background:var(--sage);}
+.word-list li.found.f-2 .dot{background:var(--golden);}
+.word-list li.found.f-3 .dot{background:var(--rose);}
+
+.complete-banner{
+  margin-top:24px;padding:18px 20px;border-radius:14px;background:var(--paper-dim);
+  border:2px solid var(--wine);display:flex;align-items:center;gap:12px;font-weight:700;
+}
+.complete-banner[hidden]{display:none;}
+.complete-banner .big{font-family:'Fraunces',serif;font-size:19px;font-weight:700;color:var(--wine);}
+@media (prefers-reduced-motion: no-preference){.complete-banner{animation:pop .35s ease;}}
+@keyframes pop{from{transform:scale(.96);opacity:0;}to{transform:scale(1);opacity:1;}}
+
+/* ---------- books section ---------- */
+.books-grid{display:flex;gap:24px;flex-wrap:wrap;}
+.book-card{
+  flex:1 1 240px;max-width:280px;background:var(--paper-raised);border:2px solid var(--ink);
+  border-radius:16px;overflow:hidden;box-shadow:0 6px 0 var(--shadow);
+}
+.book-cover-image{aspect-ratio:2550/3300;overflow:hidden;}
+.book-cover-image img{width:100%;height:100%;object-fit:cover;display:block;}
+.book-cover-placeholder{
+  aspect-ratio:5/7;display:flex;flex-direction:column;justify-content:space-between;padding:20px;color:#FFF9F1;position:relative;
+  background:linear-gradient(155deg,var(--wine) 0%, var(--ink) 100%);
+}
+.book-cover-placeholder .brand{font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;opacity:.9;font-weight:700;}
+.book-cover-placeholder .btitle{font-family:'Fraunces',serif;font-weight:700;font-size:22px;line-height:1.15;margin-top:auto;}
+.book-cover-placeholder .bsub{font-family:'DM Sans',sans-serif;font-size:12px;opacity:.92;font-weight:600;margin-top:6px;}
+.book-info{padding:16px 18px 20px;}
+.book-info .label{
+  display:inline-block;font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.1em;font-weight:700;
+  text-transform:uppercase;background:var(--paper-dim);color:var(--ink-soft);padding:4px 9px;border-radius:100px;margin-bottom:10px;
+}
+.book-info p{margin:0 0 14px;font-size:14px;color:var(--ink-soft);}
+.btn-disabled{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:100px;font-family:'DM Sans',sans-serif;
+  border:2px dashed var(--ink-faint);color:var(--ink-faint);font-size:13px;font-weight:700;
+  background:none;cursor:not-allowed;
+}
+.btn-buy{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:100px;font-family:'DM Sans',sans-serif;
+  border:2px solid var(--wine);background:var(--wine);color:#FFF9F1;font-size:13px;font-weight:700;
+  text-decoration:none;cursor:pointer;transition:background .15s ease, transform .12s ease;
+}
+.btn-buy:hover{background:var(--wine-deep);}
+.btn-buy:active{transform:translateY(1px) scale(.98);}
+.series-teaser{
+  margin:28px 0 0;padding:16px 20px;border-left:3px solid var(--sage);background:var(--paper-dim);
+  border-radius:0 12px 12px 0;color:var(--ink-soft);font-size:14px;max-width:62ch;
+}
+.series-teaser strong{color:var(--ink);}
+
+/* ---------- about ---------- */
+.about-section p{max-width:62ch;color:var(--ink-soft);font-size:16px;}
+.about-section .lede{color:var(--ink);font-size:19px;font-family:'Fraunces',serif;font-weight:700;max-width:36ch;margin-bottom:14px;}
+
+/* ---------- reviews ---------- */
+.review-section .intro{max-width:58ch;color:var(--ink-soft);font-size:18px;margin:0 0 22px;}
+.review-steps{list-style:none;margin:0 0 30px;padding:0;display:flex;flex-wrap:wrap;gap:14px;counter-reset:step;}
+.review-steps li{
+  flex:1 1 210px;counter-increment:step;display:flex;gap:12px;align-items:flex-start;
+  background:var(--paper-raised);border:2px solid var(--border);border-radius:14px;padding:14px 16px;
+  font-size:18px;font-weight:600;line-height:1.35;
+}
+.review-steps li::before{
+  content:counter(step);flex-shrink:0;width:32px;height:32px;border-radius:50%;background:var(--wine);color:#FFF9F1;
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;
+}
+.review-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;}
+.review-card{
+  display:flex;flex-direction:column;justify-content:space-between;gap:14px;
+  background:var(--paper-raised);border:2px solid var(--ink);border-radius:14px;padding:18px;
+  box-shadow:0 4px 0 var(--shadow);
+}
+.review-card .rtitle{font-family:'Fraunces',serif;font-weight:700;font-size:20px;line-height:1.2;}
+.review-card .btn-buy{justify-content:center;font-size:16px;padding:13px 18px;}
+.review-note{margin:22px 0 0;color:var(--ink-soft);font-size:16px;max-width:62ch;}
+
+footer{padding-block:32px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+  font-size:13px;color:var(--ink-faint);border-top:2px dashed var(--border);}
+footer .foot-brand{display:flex;align-items:center;gap:10px;}
+footer .seal{width:28px;height:28px;font-size:13px;}
+.logo{width:96px;height:96px;display:block;}
+.logo-sm{width:40px;height:40px;display:block;}
+@media (max-width:640px){.logo{width:80px;height:80px;}}
+
+@media (max-width:640px){
+  nav.site{display:none;}
+  .puzzle-layout{gap:22px;}
+}
+.kids-teaser{display:flex;gap:18px;align-items:center;margin:28px 0 8px;padding:18px 22px;border-radius:18px;background:#14204A;color:#FFF8EC;text-decoration:none;box-shadow:0 6px 18px rgba(20,32,74,.18);}
+.kids-teaser img{border-radius:50%;flex:none;background:#fff;}
+.kids-teaser strong{color:#F7D27A;}
+.kids-teaser .kids-go{display:inline-block;margin-left:6px;font-weight:700;text-decoration:underline;}
+.kids-teaser:hover{background:#0f1838;}
+</style>
+</head>
+<body>
+<header class="site">
+  <a class="wordmark" href="/" aria-label="Letterline Books home"><img class="logo" src="/logo.png" alt="Letterline Books" width="96" height="96"></a>
+  <nav class="site">
+    <a href="/">Home</a>
+    <a href="#books">Books</a>
+    <a href="#review">Reviews</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="/kids/letterline-kids-logo.png" alt="Letterline Kids" width="120" height="120" style="border-radius:50%;background:#fff;margin-bottom:12px">
+  <h1>Letterline <span class="hl">Kids</span></h1>
+  <p class="lede">Story books and activity books for young readers, from the makers of Letterline Books. Our first adventure: <em>The Gingerbread Man&rsquo;s Christmas Run</em>.</p>
+</section>
+
+<section id="books">
+  <div class="section-head">
+    <h2>The Gingerbread Man&rsquo;s Christmas Run</h2>
+    <span class="section-tag">New for Christmas</span>
+  </div>
+  <p class="series-teaser" style="margin-top:0">On Christmas Eve, Santa&rsquo;s Christmas Star goes missing. Only a brand-new Gingerbread Man is small and quick enough to find it! Follow him through snowy woods, past sneaky Frostbite the snowman and clever Snow Fox, to save Christmas. Read the story together, then solve the puzzles.</p>
+  <div class="books-grid">
+    <div class="book-card">
+      <div class="book-cover-image"><img src="/kids/gingerbread-picture-book.jpg" alt="The Gingerbread Man&rsquo;s Christmas Run: A Christmas Picture Book cover" loading="lazy" style="object-fit:contain;background:#14204A"></div>
+      <div class="book-info">
+        <span class="label">Book 1 &middot; Ages 3&ndash;5</span>
+        <p><strong>A Christmas Picture Book</strong> &mdash; a 32-page, full-color read-aloud adventure about courage, cleverness, and kindness.</p>
+        <a class="btn-buy" href="https://www.amazon.com/s?k=9798953539067" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+    </div>
+    <div class="book-card">
+      <div class="book-cover-image"><img src="/kids/gingerbread-activity-book.jpg" alt="The Gingerbread Man&rsquo;s Christmas Run: A Christmas Activity Book for Kids Ages 6&ndash;10 cover" loading="lazy"></div>
+      <div class="book-info">
+        <span class="label">Book 2 &middot; Ages 6&ndash;10</span>
+        <p><strong>A Christmas Activity Book</strong> &mdash; the story continues with mazes, word searches, riddles, hidden pictures, dot-to-dot, and coloring pages. Answer keys included.</p>
+        <a class="btn-buy" href="https://www.amazon.com/s?k=9798953539074" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="review" class="review-section">
+  <div class="section-head">
+    <h2>Loved a Letterline Kids book? Leave a review.</h2>
+    <span class="section-tag">For grown-ups &middot; About a minute</span>
+  </div>
+  <p class="intro">Honest reviews help other families find our books, and help a small publisher keep making them. Thank you for taking a moment!</p>
+  <ol class="review-steps">
+    <li><span>Find your book below and click <strong>Write a review</strong>.</span></li>
+    <li><span>Sign in to Amazon.</span></li>
+    <li><span>Pick your stars and write a line or two.</span></li>
+    <li><span>Got a free copy? Add: &ldquo;I received a free copy.&rdquo;</span></li>
+  </ol>
+  <div class="review-grid">
+    <div class="review-card">
+      <span class="rtitle">The Gingerbread Man&rsquo;s Christmas Run: Picture Book</span>
+      <a class="btn-buy" href="https://www.amazon.com/s?k=9798953539067" target="_blank" rel="noopener">Write a review</a>
+    </div>
+    <div class="review-card">
+      <span class="rtitle">The Gingerbread Man&rsquo;s Christmas Run: Activity Book</span>
+      <a class="btn-buy" href="https://www.amazon.com/s?k=9798953539074" target="_blank" rel="noopener">Write a review</a>
+    </div>
+  </div>
+  <p class="review-note">Reviews are always optional, and we welcome your honest opinion, whatever it is. If you don&rsquo;t shop on Amazon, these links may not work for you, and that&rsquo;s okay. We hope you enjoyed the book!</p>
+</section>
+
+<footer>
+  <div class="foot-brand"><img class="logo-sm" src="/logo.png" alt="" width="40" height="40"><span>&copy; <span id="year"></span> Letterline Books</span></div>
+  <span><a href="/">Letterline Books home</a> &middot; <a href="#review">Leave a review</a></span>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
